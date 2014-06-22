@@ -18,9 +18,16 @@ This section describes how the tidy data for averages of each activity and subje
   * x file contains 561 of features measured
 5. Merge both train and test data set; row combine
 6. To label headers, we needed to read the file: "UCI HAR Dataset/features.txt"
-  1. Each row represents name of each X file.
+  1. Each row represents name of measurement field of each X file.
   2. Need to include "SUBJECT_ID" and "ACTIVITY_LABEL_ID" to represent subject ID and activity in ID form
-
+  3. Set the title of the merged data
+7. Get the name of each measured feature name that represents mean and standard deviation
+8. Filter using field names obtained from step 7. Must also include subject ID and activity ID. Extract only the required columns of the merged data set.
+9. Read "activity_labels.txt" file. This contains a reference table that links ACTIVITY_LABEL_ID and its respective name.
+10. Set keys to the table defined in step 9 and the filtered merged data from step 8.
+11. Perform a merge operation on the two datasets. This should bring in the activity names by using the key: ACTIVITY_LABEL_ID and y file data
+12. melt the data, using "SUBJECT_ID" and "ACTIVITY_LABEL_NAME" as ID columns. Measure variables were defined as all the column names from step 7.
+13. Cast the data table with dcast based on two criteria: "SUBJECT_ID" and "ACTIVITY_LABEL_NAME". For the other fields, execute the mean function.
 
 ### Data dictionary
 SUBJECT_ID: 
@@ -29,13 +36,13 @@ SUBJECT_ID:
 * source: "UCI HAR Dataset/train/subject_train.txt", "UCI HAR Dataset/test/subject_test.txt"
 
 ACTIVITY_LABEL_NAME:
-* description: activity names. there should be six
-* type: integer ranging from 1 to 30.
-* source: "subject_train.txt", "subject_test.txt"
+* description: activity names. there should be six types
+* type: text
+* source: "activity_labels.txt"
 
 tBodyAcc-mean()-X:
 * description: activity names. there should be six
-* type: integer ranging from 1 to 30.
+* type: double
 * source: "subject_train.txt", "subject_test.txt"
 
 tBodyAcc-mean()-Y
