@@ -18,6 +18,8 @@ After running the program, the return of the main function is a tidy data set wi
 **NOTE!** This tidy data set is **NOT** the answer to step 5 of the assignment.
 
 There should be two files written:
+
 1. The basic tidy data set - return of main(). file: wearable_computing_DT-basic_tidy_data.txt
+
 2. The independent tidy data set with the average of each variable for each activity and each subject. file: wearable_computing_DT-average_tidy_data.txt
 
