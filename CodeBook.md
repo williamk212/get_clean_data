@@ -13,9 +13,9 @@ This section describes how the tidy data for averages of each activity and subje
 ..* x file contains 561 of features measured
 3. Test data - read data files: test/subject_test.txt, test/y_test.txt, train/X_test.txt
 4. column bind test data in read order: subject, y, X
-* subject file contains subject ID
-* y file contains the activity_labels ID
-* x file contains 561 of features measured
+..* subject file contains subject ID
+..* y file contains the activity_labels ID
+..* x file contains 561 of features measured
 
 ### Data dictionary
 SUBJECT_ID: 
