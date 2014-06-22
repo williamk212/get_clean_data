@@ -17,7 +17,10 @@ This section describes how the tidy data for averages of each activity and subje
 ..* y file contains the activity_labels ID
 ..* x file contains 561 of features measured
 5. Merge both train and test data set; row combine
-6. efe
+6. To label headers, we needed to read the file: "UCI HAR Dataset/features.txt"
+⋅⋅1. Each row represents name of each X file.
+⋅⋅2. Need to include "SUBJECT_ID" and "ACTIVITY_LABEL_ID" to represent subject ID and activity in ID form
+
 
 ### Data dictionary
 SUBJECT_ID: 
