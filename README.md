@@ -8,6 +8,7 @@ https://class.coursera.org/getdata-004/human_grading
 The requirements for this program to run is to have the required raw data set exploded on the same directory that the source file is located at.
 The raw data set can be retrieved from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+### Instructions
 To run: 
 ```R
 source("run_analysis.R")
