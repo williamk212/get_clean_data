@@ -16,6 +16,8 @@ This section describes how the tidy data for averages of each activity and subje
 ..* subject file contains subject ID
 ..* y file contains the activity_labels ID
 ..* x file contains 561 of features measured
+5. Merge both train and test data set; row combine
+6. efe
 
 ### Data dictionary
 SUBJECT_ID: 
@@ -23,11 +25,16 @@ SUBJECT_ID:
 * type: integer ranging from 1 to 30.
 * source: "UCI HAR Dataset/train/subject_train.txt", "UCI HAR Dataset/test/subject_test.txt"
 
-ACTIVITY_LABEL_NAME
-* description: ID of test subject
+ACTIVITY_LABEL_NAME:
+* description: activity names. there should be six
 * type: integer ranging from 1 to 30.
-* source: "UCI HAR Dataset/train/subject_train.txt", "UCI HAR 
-tBodyAcc-mean()-X
+* source: "subject_train.txt", "subject_test.txt"
+
+tBodyAcc-mean()-X:
+* description: activity names. there should be six
+* type: integer ranging from 1 to 30.
+* source: "subject_train.txt", "subject_test.txt"
+
 tBodyAcc-mean()-Y
 tBodyAcc-mean()-Z
 tGravityAcc-mean()-X
