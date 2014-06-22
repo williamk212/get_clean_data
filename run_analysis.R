@@ -26,14 +26,20 @@ main <- function() {
   # 4. Appropriately labels the data set with descriptive variable names.
   wearable_computing_DT <- merge_activity_label(filtered_data_DT)
   
+  basic_tidy_file <- "./wearable_computing_DT-basic_tidy_data.txt"
+  write.table(wearable_computing_DT, basic_tidy_file, row.names = FALSE)
+  
   # Now let's reshape data to get average of each variable for 
   # each activity and each subject.
-  mean_std_cols <- get_mean_std_col(review_data)
-  wearable_computing_DT_melt <- melt(review_data, 
+  mean_std_cols <- get_mean_std_col(wearable_computing_DT)
+  wearable_computing_DT_melt <- melt(wearable_computing_DT, 
                                      id=c("SUBJECT_ID", "ACTIVITY_LABEL_NAME"), 
                                      measure.vars=mean_std_cols)
   subject_activity_avg <- dcast(wearable_computing_DT_melt, 
                                 SUBJECT_ID+ACTIVITY_LABEL_NAME ~ variable,mean)
+  average_tidy_file <- "./wearable_computing_DT-average_tidy_data.txt"
+  write.table(subject_activity_avg, average_tidy_file, row.names = FALSE)
+  wearable_computing_DT_melt
 }
 
 merge_activity_label <- function(data_table_set) {
@@ -72,13 +78,13 @@ get_mean_subject_activity <- function(data_table_set, subject_id, activity_name,
 get_filter_column_indices <- function(data_set) {
   mean_std_cols <- get_mean_std_col(data_set)
   # make sure we grab the first two columns also
-  filter_col_indices <- c("SUBJECT_ID", "ACTIVITY_LABEL_ID", mean_cols, std_cols)
+  filter_col_indices <- c("SUBJECT_ID", "ACTIVITY_LABEL_ID", mean_std_cols)
 }
 
 get_mean_std_col <- function(data_set) {
   mean_cols <- grep(".*-mean\\(\\).*", colnames(data_set), value = TRUE)
   std_cols <- grep(".*-std\\(\\).*", colnames(data_set), value = TRUE)
-  c(mean_cols, std_cols)  
+  c(mean_cols, std_cols)
 }
 
 ## This function will set the name of all the header names in
