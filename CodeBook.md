@@ -8,19 +8,18 @@ This section describes how the tidy data for averages of each activity and subje
 
 1. Train data - read data files: train/subject_train.txt, train/y_train.txt, train/X_train.txt
 2. column bind training data in read order: subject, y, X
-
-..* subject file contains subject ID
-..* y file contains the activity_labels ID
-..* x file contains 561 of features measured
+  * subject file contains subject ID
+  * y file contains the activity_labels ID
+  * x file contains 561 of features measured
 3. Test data - read data files: test/subject_test.txt, test/y_test.txt, train/X_test.txt
 4. column bind test data in read order: subject, y, X
-..* subject file contains subject ID
-..* y file contains the activity_labels ID
-..* x file contains 561 of features measured
+  * subject file contains subject ID
+  * y file contains the activity_labels ID
+  * x file contains 561 of features measured
 5. Merge both train and test data set; row combine
 6. To label headers, we needed to read the file: "UCI HAR Dataset/features.txt"
-⋅⋅1. Each row represents name of each X file.
-⋅⋅2. Need to include "SUBJECT_ID" and "ACTIVITY_LABEL_ID" to represent subject ID and activity in ID form
+  1. Each row represents name of each X file.
+  2. Need to include "SUBJECT_ID" and "ACTIVITY_LABEL_ID" to represent subject ID and activity in ID form
 
 
 ### Data dictionary
