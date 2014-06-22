@@ -6,13 +6,27 @@ The data is 1 space delimited.
 ### Operation
 This section describes how the tidy data for averages of each activity and subject ID was derived.
 
-1. For each data set (train, test), 
+1. Train data - read data files: train/subject_train.txt, train/y_train.txt, train/X_train.txt
+2. column bind training data in read order: subject, y, X
+* subject file contains subject ID
+* y file contains the activity_labels ID
+* x file contains 561 of features measured
+3. Test data - read data files: test/subject_test.txt, test/y_test.txt, train/X_test.txt
+4. column bind test data in read order: subject, y, X
+* subject file contains subject ID
+* y file contains the activity_labels ID
+* x file contains 561 of features measured
 
 ### Data dictionary
-SUBJECT_ID: ID of test subject
+SUBJECT_ID: 
+* description: ID of test subject
 * type: integer ranging from 1 to 30.
 * source: "UCI HAR Dataset/train/subject_train.txt", "UCI HAR Dataset/test/subject_test.txt"
+
 ACTIVITY_LABEL_NAME
+* description: ID of test subject
+* type: integer ranging from 1 to 30.
+* source: "UCI HAR Dataset/train/subject_train.txt", "UCI HAR 
 tBodyAcc-mean()-X
 tBodyAcc-mean()-Y
 tBodyAcc-mean()-Z
