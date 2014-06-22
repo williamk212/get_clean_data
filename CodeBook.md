@@ -1,14 +1,14 @@
 ### CodeBook for tidy data set
 This is the code book for tidy data set with the average of each variable for each activity and each subject
 
-The data is 1 space delimited.
+The data is 1 space character delimited.
 
 ### Operation
 This section describes how the tidy data for averages of each activity and subject ID was derived.
 
 1. Train data - read data files: train/subject_train.txt, train/y_train.txt, train/X_train.txt
 2. column bind training data in read order: subject, y, X
-* subject file contains subject ID
+.* subject file contains subject ID
 ⋅⋅* y file contains the activity_labels ID
 ⋅⋅* x file contains 561 of features measured
 3. Test data - read data files: test/subject_test.txt, test/y_test.txt, train/X_test.txt
