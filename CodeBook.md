@@ -41,25 +41,85 @@ ACTIVITY_LABEL_NAME:
 * source: "activity_labels.txt"
 
 tBodyAcc-mean()-X:
-* description: activity names. there should be six
+* description: average of time body acceleration, X-axis
 * type: double
-* source: "subject_train.txt", "subject_test.txt"
+* source: "X_train.txt", "X_test.txt"
 
-tBodyAcc-mean()-Y
-tBodyAcc-mean()-Z
-tGravityAcc-mean()-X
-tGravityAcc-mean()-Y
-tGravityAcc-mean()-Z 
-tBodyAccJerk-mean()-X 
-tBodyAccJerk-mean()-Y 
-tBodyAccJerk-mean()-Z 
-tBodyGyro-mean()-X 
-tBodyGyro-mean()-Y 
-tBodyGyro-mean()-Z 
-tBodyGyroJerk-mean()-X 
-tBodyGyroJerk-mean()-Y 
-tBodyGyroJerk-mean()-Z 
-tBodyAccMag-mean() 
+tBodyAcc-mean()-Y:
+* description: average of time body acceleration, Y-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyAcc-mean()-Z:
+* description: average of time body acceleration, Z-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tGravityAcc-mean()-X:
+* description: average of time gravity acceleration, X-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tGravityAcc-mean()-Y:
+* description: average of time gravity acceleration, Y-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tGravityAcc-mean()-Z:
+* description: average of time gravity acceleration, Z-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyAccJerk-mean()-X:
+* description: average of time body jerk acceleration, X-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyAccJerk-mean()-Y:
+* description: average of time body jerk acceleration, Y-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyAccJerk-mean()-Z:
+* description: average of time body jerk acceleration, Z-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyGyro-mean()-X:
+* description: average of time body gyro, X-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyGyro-mean()-Y:
+* description: average of time body gyro, Y-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyGyro-mean()-Z:
+* description: average of time body gyro, Z-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyGyroJerk-mean()-X:
+* description: average of time body gyro jerk movement, X-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyGyroJerk-mean()-Y:
+* description: average of time body gyro jerk movement, Y-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyGyroJerk-mean()-Z:
+* description: average of time body gyro jerk movement, Z-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
+tBodyAccMag-mean():
+* description: average of time body gyro jerk movement, X-axis
+* type: double
+* source: "X_train.txt", "X_test.txt"
+
 tGravityAccMag-mean() 
 tBodyAccJerkMag-mean() 
 tBodyGyroMag-mean() 
